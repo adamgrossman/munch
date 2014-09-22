@@ -73,20 +73,20 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+              <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/served/settings.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1573">
-                      <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+                    <state vertical-scroll-proportion="0.35927367" vertical-offset="763" max-vertical-offset="1586">
+                      <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="wsgi.py" pinned="false" current="true" current-in-tab="true">
+              <file leaf-file-name="wsgi.py" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/served/wsgi.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.2697795" vertical-offset="0" max-vertical-offset="771">
+                    <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="325">
                       <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
                       <folding />
                     </state>
@@ -206,8 +206,8 @@
         <option value="$PROJECT_DIR$/dish_server/templates/base.html" />
         <option value="$PROJECT_DIR$/dish_server/views.py" />
         <option value="$PROJECT_DIR$/dish_server/templates/restaurant.html" />
-        <option value="$PROJECT_DIR$/served/settings.py" />
         <option value="$PROJECT_DIR$/served/wsgi.py" />
+        <option value="$PROJECT_DIR$/served/settings.py" />
       </list>
     </option>
   </component>
@@ -1032,18 +1032,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/served/settings.py">
+    <entry file="file://$PROJECT_DIR$/served/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1573">
-          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="325">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/served/wsgi.py">
+    <entry file="file://$PROJECT_DIR$/served/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2697795" vertical-offset="0" max-vertical-offset="771">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.35927367" vertical-offset="763" max-vertical-offset="1586">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding />
         </state>
       </provider>
