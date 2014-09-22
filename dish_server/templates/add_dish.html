@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Share the Munchies!</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Share a new dish">
+    </form>
+    <br>
+    <hr>
+
+{#    <br>#}
+{#    <form method="post" enctype="multipart/form-data">#}
+{#        {%  csrf_token %}#}
+{#        {{ photoform.as_p }}#}
+{#        <input type="submit" value="Upload photo">#}
+{#    </form>#}
+
+{% endblock %}
+

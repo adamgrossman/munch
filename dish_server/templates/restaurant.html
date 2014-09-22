@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Restaurants</h1>
+    <p>Where do you want to eat?</p>
+    <hr>
+
+    <div class="col-lg-12">
+        <h4>Restaurants</h4>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Description</th>
+            </tr>
+            {% for restaurant in data %}
+            <tr>
+                <td>{{ restaurant.name }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <p>Found a new spot? Own a restaurant? <a href="{% url 'add_restaurant' %}"> Add a new listing!</a></p>
+
+
+{% endblock %}

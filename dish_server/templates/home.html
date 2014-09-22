@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <br>
+    <h1 class="main-title">Munch.</h1>
+    <hr>
+
+<div class="jumbotron">
+  <h1 style="font-size: 40px">Start Munchin'</h1>
+  <br>
+  <p>Our day revolves around the food we eat. Whether it is a new restaurant, somewhere you're a regular, or a great home cooked meal, we want to share it with the people we care about.</p>
+  <p>Munch allows you to keep track of restaurants and dishes you want to try! Create food clubs and add friends to find new ways to enjoy the best part of your day.</p>
+  <h3><a href="{% url 'login' %}">Log in now!</a></h3>
+  <h3>Not a member? <a href="{% url 'register' %}">Register now!</a></h3>
+  <br>
+</div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Clubs</h1>
+    <p>Friends who eat together, stay together...</p>
+    <hr>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h4>Fellow Foodies</h4>
+            <table class="table">
+                <tr>
+                    <td>View</td>
+                    <th>Name</th>
+                    <th>Photo</th>
+                    <th>Description</th>
+                </tr>
+                {% for club in member.clubs.all %}
+                <tr>
+                    <td><span style=padding-left:6px; class="glyphicon glyphicon-cutlery"></span></td>
+                    <td>{{ club.name }}</td>
+                    <td>Photo</td>
+                    <td><i>{{ club.description }}</i></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+    <p>Don't see one you like? Want to try something new? <a href="{% url 'add_club' %}">Make a new club!</a></p>
+
+
+{% endblock %}

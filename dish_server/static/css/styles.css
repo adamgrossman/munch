@@ -1,0 +1,35 @@
+.navbar {
+    /*font-size: ;*/
+    color: yellow;
+    border-radius: 5px;
+    margin: 2px;
+    /*height: 7vh;*/
+}
+
+/*.container {*/
+    /*background-color: lightslategray;*/
+    /*height: 80vh;*/
+    /*border-radius: 5px;*/
+/*}*/
+
+.main-title {
+    font-size: 75px;
+    text-align: center;
+}
+
+.main-button {
+    text-align: center;
+    min-width: 100px;
+}
+
+/*.container {*/
+    /*background-color: #ffffff;*/
+    /*border-radius: 5px;*/
+    /*padding: 10px;*/
+    /*height: 80vh;*/
+/*}*/
+
+/*body {*/
+    /*background: url('../img/foodbackground.jpg');*/
+    /*background-size: cover;*/
+/*}*/
