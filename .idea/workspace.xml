@@ -73,24 +73,22 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+              <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/served/settings.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.15175097" vertical-offset="0" max-vertical-offset="1573">
-                      <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+                    <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1573">
+                      <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="wsgi.py" pinned="false" current="false" current-in-tab="false">
+              <file leaf-file-name="wsgi.py" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/served/wsgi.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="325">
-                      <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-                      <folding>
-                        <element signature="e#222#271#0" expanded="true" />
-                      </folding>
+                    <state vertical-scroll-proportion="0.2697795" vertical-offset="0" max-vertical-offset="771">
+                      <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                      <folding />
                     </state>
                   </provider>
                 </entry>
@@ -208,8 +206,8 @@
         <option value="$PROJECT_DIR$/dish_server/templates/base.html" />
         <option value="$PROJECT_DIR$/dish_server/views.py" />
         <option value="$PROJECT_DIR$/dish_server/templates/restaurant.html" />
-        <option value="$PROJECT_DIR$/served/wsgi.py" />
         <option value="$PROJECT_DIR$/served/settings.py" />
+        <option value="$PROJECT_DIR$/served/wsgi.py" />
       </list>
     </option>
   </component>
@@ -898,14 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local_settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="143">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dish_server/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="702">
@@ -1034,20 +1024,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/served/wsgi.py">
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="325">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#222#271#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="771">
+          <caret line="0" column="35" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/served/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15175097" vertical-offset="0" max-vertical-offset="1573">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1573">
+          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/served/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2697795" vertical-offset="0" max-vertical-offset="771">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
