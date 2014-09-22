@@ -74,10 +74,10 @@ def add_restaurant(request):
     return render(request, "add_restaurant.html", data)
 
 
-def restaurants(request):
+def all_restaurants(request):
     members = {}
     for member in Member.objects.all():
-        group_id = member.clubs.values('id')
+        group_id = member.clubs.values_list('id')
         restaurants = Restaurant.objects.filter(group__pk__in=group_id).distinct()
         members[member.clubs] = restaurants
 
@@ -85,7 +85,10 @@ def restaurants(request):
     data = {"members": members, 'food': food}
     return render(request, 'restaurant.html', data)
 
-#
+
+
+
+
 # def all_restaurants(request):
 #
 #

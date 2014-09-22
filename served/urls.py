@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     # url(r'^clubs/(?P<club_id>\d+)/$', 'dish_server.views.view_club', name='view_club'),
 
     # RESTAURANTS
-    url(r'^restaurants/$', 'dish_server.views.restaurants', name='restaurants'),
+    url(r'^restaurants/$', 'dish_server.views.all_restaurants', name='restaurants'),
     url(r'^restuarants/new/$', 'dish_server.views.add_restaurant', name='add_restaurant'),
 
     # DISHES
