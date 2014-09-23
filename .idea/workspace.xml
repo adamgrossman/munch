@@ -22,7 +22,7 @@
     <favorites_list name="served" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46634027">
+    <splitter split-orientation="horizontal" split-proportion="0.5287638">
       <split-first>
         <leaf>
           <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
@@ -40,8 +40,8 @@
           <file leaf-file-name="view_dish.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/dish_server/templates/view_dish.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-11.227273" vertical-offset="0" max-vertical-offset="546">
-                  <caret line="19" column="74" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="74" />
+                <state vertical-scroll-proportion="-4.1363635" vertical-offset="0" max-vertical-offset="546">
+                  <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -55,16 +55,6 @@
                   <folding>
                     <element signature="e#0#57#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="hungry.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dish_server/templates/hungry.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="455">
-                  <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -113,10 +103,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="view_club.html" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="view_club.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/dish_server/templates/view_club.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.48914617" vertical-offset="0" max-vertical-offset="691">
+                <state vertical-scroll-proportion="-15.363636" vertical-offset="0" max-vertical-offset="442">
                   <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
                   <folding>
                     <element signature="e#508#531#0#HTML" expanded="true" />
@@ -125,11 +115,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="clubs.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="clubs.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/dish_server/templates/clubs.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-8.272727" vertical-offset="0" max-vertical-offset="468">
-                  <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+                <state vertical-scroll-proportion="0.39507958" vertical-offset="0" max-vertical-offset="691">
+                  <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
                   <folding />
                 </state>
               </provider>
@@ -163,11 +153,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="register.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="register.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/dish_server/templates/registration/register.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.17881706" vertical-offset="0" max-vertical-offset="727">
+                <state vertical-scroll-proportion="-5.909091" vertical-offset="0" max-vertical-offset="221">
                   <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="hungry.html" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/dish_server/templates/hungry.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.51856947" vertical-offset="0" max-vertical-offset="727">
+                  <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
@@ -214,12 +214,12 @@
         <option value="$PROJECT_DIR$/dish_server/forms.py" />
         <option value="$PROJECT_DIR$/dish_server/templates/view_dish.html" />
         <option value="$PROJECT_DIR$/served/urls.py" />
-        <option value="$PROJECT_DIR$/dish_server/templates/hungry.html" />
         <option value="$PROJECT_DIR$/dish_server/templates/profile.html" />
         <option value="$PROJECT_DIR$/dish_server/templates/registration/register.html" />
-        <option value="$PROJECT_DIR$/dish_server/templates/clubs.html" />
         <option value="$PROJECT_DIR$/dish_server/views.py" />
         <option value="$PROJECT_DIR$/dish_server/templates/view_club.html" />
+        <option value="$PROJECT_DIR$/dish_server/templates/hungry.html" />
+        <option value="$PROJECT_DIR$/dish_server/templates/clubs.html" />
       </list>
     </option>
   </component>
@@ -1030,16 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/served/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="637">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dish_server/templates/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.818182" vertical-offset="39" max-vertical-offset="1157">
@@ -1052,26 +1042,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dish_server/templates/hungry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="455">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dish_server/templates/add_dish.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.5" vertical-offset="0" max-vertical-offset="364">
           <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dish_server/templates/view_dish.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.227273" vertical-offset="0" max-vertical-offset="546">
-          <caret line="19" column="74" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="74" />
           <folding />
         </state>
       </provider>
@@ -1096,14 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dish_server/templates/clubs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.272727" vertical-offset="0" max-vertical-offset="468">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../playingcards/cards/templates/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3277311" vertical-offset="0" max-vertical-offset="714">
@@ -1114,7 +1080,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dish_server/templates/registration/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17881706" vertical-offset="0" max-vertical-offset="727">
+        <state vertical-scroll-proportion="-5.909091" vertical-offset="0" max-vertical-offset="221">
           <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
           <folding />
         </state>
@@ -1122,11 +1088,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dish_server/templates/view_club.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48914617" vertical-offset="0" max-vertical-offset="691">
+        <state vertical-scroll-proportion="-15.363636" vertical-offset="0" max-vertical-offset="442">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="e#508#531#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/served/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="637">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dish_server/templates/hungry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51856947" vertical-offset="0" max-vertical-offset="727">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dish_server/templates/view_dish.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1363635" vertical-offset="0" max-vertical-offset="546">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dish_server/templates/clubs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39507958" vertical-offset="0" max-vertical-offset="691">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>

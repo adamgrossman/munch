@@ -19,7 +19,7 @@
                 <td><a href="{% url "view_club" club.id %}"><span style=padding-left:6px; class="glyphicon glyphicon-cutlery"></span></a></td>
                 <td>{{ club.name }}</td>
                 <td>{{ members|length }}</td>
-                <td><i>{{ club.description }}</i></td>
+                <td>{{ club.description }}</td>
             </tr>
             {% endfor %}
         </table>
