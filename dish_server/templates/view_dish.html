@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <h1>{{ dish.name|capfirst }}</h1>
+    <p>{{ dish.restaurant }}</p>
+    <hr>
+
+    <div class="col-lg-12">
+        <h4>Dish Info</h4>
+        <table class="table">
+            <tr>
+                <th>Course</th>
+                <th>Price</th>
+                <th>Photo</th>
+            </tr>
+            <tr>
+                <td>{{ dish.course }}</td>
+                <td>${{ dish.price }}</td>
+                <td><img width="200px" src="{%  static dish.photo.url %}">
+
+{#                    <form method="post" enctype="multipart/form-data">#}
+{#                    {% csrf_token %}#}
+{#                    {{ form.as_p }}#}
+{#                    <input type="submit" value="Change or upload a new photo!">#}
+{#                </form>#}
+                </td>
+{#                <td><img style="width: 200" src="{{ dish.photo.url }}" /></td>#}
+            </tr>
+        </table>
+    </div>
+
+    <a href="{% url 'dishes' %}">Back to all Munchies</a>
+
+
+{% endblock %}

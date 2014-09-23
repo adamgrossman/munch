@@ -30,7 +30,7 @@
   <div class="navbar-collapse collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav">
       {% if user.is_authenticated %}
-      <li class="active"><a class="navbar-link" href="#">I'm Hungry!</a></li>
+      <li class="active"><a class="navbar-link" href="{% url 'hungry' %}">I'm Hungry!</a></li>
       <li><a class="navbar-link" href="{% url 'clubs' %}">Clubs</a></li>
       <li><a class="navbar-link" href="{% url 'restaurants' %}">Restaurants</a></li>
       <li><a class="navbar-link" href="{% url 'dishes' %}">Munchies</a></li>

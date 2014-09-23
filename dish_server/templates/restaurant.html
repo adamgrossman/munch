@@ -9,14 +9,21 @@
         <h4>Restaurants</h4>
         <table class="table">
             <tr>
+                <th>View</th>
                 <th>Name</th>
                 <th>City</th>
+                <th>State</th>
                 <th>Country</th>
                 <th>Description</th>
             </tr>
-            {% for restaurant in restaurants.all %}
+            {% for place in restaurant %}
             <tr>
-                <td>{{ restaurant.name }}</td>
+                <td><a href="{% url 'view_restaurant' place.id %}"><span style=padding-left:6px; class="glyphicon glyphicon-cutlery"></span></a></td>
+                <td>{{ place.name }}</td>
+                <td>{{ place.city }}</td>
+                <td>{{ place.state }}</td>
+                <td>{{ place.country }}</td>
+                <td>{{ place.description }}</td>
             </tr>
             {% endfor %}
         </table>

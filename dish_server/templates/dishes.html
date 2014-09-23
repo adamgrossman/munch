@@ -9,15 +9,17 @@
         <h4>Munchies</h4>
         <table class="table">
             <tr>
+                <th>View</th>
                 <th>Name</th>
                 <th>Restaurant</th>
-                <th>Photo</th>
-                <th>Description</th>
+                <th>Price</th>
             </tr>
-            {% for club in member.clubs.all %}
+            {% for dish in munchies %}
             <tr>
-                <td>{{ club.name }}</td>
-                <td><a href="{% url 'clubs' %}"><span class="glyphicon glyphicon-cutlery"></span></a></td>
+                <td><a href="{% url 'view_dish' dish.id %}"><span style=padding-left:6px; class="glyphicon glyphicon-cutlery"></span></a></td>
+                <td>{{ dish.name }}</td>
+                <td>{{ dish.restaurant }}</td>
+                <td>{{ dish.price }}</td>
             </tr>
             {% endfor %}
         </table>

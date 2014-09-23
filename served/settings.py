@@ -103,6 +103,10 @@ try:
 except ImportError:
     pass
 
+UPLOAD_HANDLERS = ("django.core.files.uploadhandler.MemoryFileUploadHandler",
+ "django.core.files.uploadhandler.TemporaryFileUploadHandler",)
+
+
 AUTH_USER_MODEL = 'dish_server.Member'
 
 LOGIN_REDIRECT_URL = 'profile'

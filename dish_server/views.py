@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from dish_server.forms import EmailUserCreationForm, ClubForm, RestaurantForm
-from dish_server.models import Member, Club, Restaurant
+from dish_server.forms import EmailUserCreationForm, ClubForm, RestaurantForm, DishForm
+from dish_server.models import Member, Club, Restaurant, Dish
 
 
 # HOME, PROFILE, AND REGISTRATION
@@ -11,7 +11,7 @@ def home(request):
 
 def register(request):
     if request.method == 'POST':
-        form = EmailUserCreationForm(request.POST)
+        form = EmailUserCreationForm(request.POST, request.FILES)
         if form.is_valid():
             if form.save():
                 return redirect('login')
@@ -25,6 +25,13 @@ def register(request):
 def profile(request):
     if not request.user.is_authenticated():
         return redirect('login')
+
+    # profile_photo(request, request.user.id)
+    # if request.method == 'POST':
+    #     form = ProfilePictureForm(request.POST, request.FILES)
+    #     if form.is_valid():
+    #         form.save()
+
     member = Member.objects.get(pk=request.user.id)
     data = {'member': member}
     return render(request, "profile.html", data)
@@ -48,14 +55,16 @@ def add_club(request):
 
 def clubs(request):
     member = Member.objects.get(pk=request.user.id)
-    data = {'member': member}
+    members = Club.objects.filter(member=request.user)
+    data = {'member': member, "members":members}
     return render(request, "clubs.html", data)
 
 
-def all_clubs(request, club_id):
-    club = Club.objects.get(pk=club_id)
-    data = {'club': club}
-    return render(request, "profile.html", "clubs.html", data)
+def view_club(request, club_id):
+    clubs = Club.objects.get(pk=club_id)
+    members = Club.objects.filter(member=request.user)
+    data = {"clubs": clubs, "members": members}
+    return render(request, "view_club.html", data)
 
 
 # RESTAURANTS
@@ -74,79 +83,66 @@ def add_restaurant(request):
     return render(request, "add_restaurant.html", data)
 
 
-def all_restaurants(request):
-    members = {}
-    for member in Member.objects.all():
-        group_id = member.clubs.values_list('id')
-        restaurants = Restaurant.objects.filter(group__pk__in=group_id).distinct()
-        members[member.clubs] = restaurants
+def restaurants(request):
+    restaurant = Restaurant.objects.all()
 
-    food = Restaurant.objects.all()
-    data = {"members": members, 'food': food}
+    data = {'restaurant': restaurant}
     return render(request, 'restaurant.html', data)
 
 
+def view_restaurant(request, restaurant_id):
+    view_restaurants = Restaurant.objects.get(pk=restaurant_id)
+    data = {"view_restaurants": view_restaurants}
+    return render(request, "view_restaurant.html", data)
 
 
-
-# def all_restaurants(request):
-#
-#
-#
-#     # user_clubs = {}
-#     # for club in request.user.id():
-#     #     club_ids = club.restaurants.values('id')
-#     #     clubs[club.restaurants] = club_ids
-#
-#     data = {}
-#     return render(request, "restaurant.html", data)
-
-
-#
-# def all_restaurants(request, club_id):
-#     member = Member.objects.get(pk=request.user.id)
-#     club = Club.objects.get(pk=club_id)
-#     restaurant = restaurants.clubs.get()
-#     data = {"club": club}
-#     return render(request, 'restaurant.html', data)
-
-
-def dishes(request):
-    return render(request, 'dishes.html')
-
-
-
-
-# def view_club(request, club_id):
-#     club = Club.objects.get(pk=club_id)
-#     data = {'club': club}
-#     return render(request, "clubs.html", data)
-
-
+# DISHES
 @login_required
 def add_dish(request):
 
     if request.method == "POST":
-        form = ClubForm(request.POST)
+        form = DishForm(request.POST, request.FILES)
         if form.is_valid():
             if form.save():
                 return redirect('dishes')
     else:
-        form = ClubForm()
+        form = DishForm()
     data = {"form": form}
 
     return render(request, "add_dish.html", data)
 
 
+def dishes(request):
+    munchies = Dish.objects.all()
+    data = {"munchies": munchies}
+    return render(request, 'dishes.html', data)
 
 
+def view_dish(request, dish_id):
+    dish = Dish.objects.get(pk=dish_id)
 
-# def upload_picture(request, member_id):
+    # if request.method == 'POST':
+    #     FoodPictureForm(request.POST, request.FILES)
+        # if form.is_valid():
+        #     form.save()
+
+    data = {"dish": dish}
+    return render(request, "view_dish.html", data)
+
+
+# HUNGRY
+def hungry(request):
+    food = Dish.objects.order_by('?')[:1]
+    food = food[0]
+    data = {"food": food}
+    return render(request, 'hungry.html', data)
+
+#
+# def food_photo(request, dish_id):
 #     if request.method == 'POST':
-#         picture_form = PictureForm(request.POST, request.FILES)
+#         picture_form = FoodPictureForm(request.POST, request.FILES)
 #         if picture_form.is_valid():
-#             pic = Picture(description=picture_form.cleaned_data['description'],
-#                           image=picture_form.cleaned_data['picture'],
-#                           location=Member.objects.get(pk=member_id))
+#             pic = Dish(photo=Dish.objects.get(pk=dish_id))
 #             pic.save()
-#         return redirect('view_location', member_id)
+#
+#     return redirect('upload_picture', dish_id)

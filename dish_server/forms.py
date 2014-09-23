@@ -12,7 +12,7 @@ class EmailUserCreationForm(UserCreationForm):
 
     class Meta:
         model = Member
-        fields = ("username", "first_name", "last_name", "email", "city", "country", "password1", "password2")
+        fields = ("username", "first_name", "last_name", "email", "city", "country", "photo", "password1", "password2")
 
     def clean_username(self):
         username = self.cleaned_data["username"]
@@ -33,16 +33,29 @@ class ClubForm(forms.ModelForm):
         fields = ("name", "member", "description")
 
 
-class DishForm(forms.ModelForm):
-
-    class Meta:
-        model = Dish
-        fields = ("name", "restaurant")
-
-
 class RestaurantForm(forms.ModelForm):
 
     class Meta:
         model = Restaurant
-        fields = ("name", "group", "city", "country", "description")
+        fields = ("name", "club", "city", "state", "country", "description")
 
+
+class DishForm(forms.ModelForm):
+
+    class Meta:
+        model = Dish
+        fields = ("name", "course", "restaurant", "price", "photo")
+
+
+class ProfilePictureForm(forms.ModelForm):
+
+    class Meta:
+        model = Member
+        fields = ("photo",)
+
+#
+# class FoodPictureForm(forms.ModelForm):
+#
+#     class Meta:
+#         model = Dish
+#         fields = ("photo",)

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <h1>So... You're hungry?</h1>
+    <p>Let's fix that. Give this a shot!</p>
+{#    <h1>{{ food|capfirst }}</h1>#}
+{#    <p>{{ food.restaurant }}</p>#}
+    <hr>
+
+    <div class="col-lg-12">
+        <h4>{{ food }}</h4>
+        <table class="table">
+            <tr>
+                <th>Photo</th>
+                <th>Course</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td><img width="200px" src="{%  static dish.photo.url %}"></td>
+                <td>{{ food.course }}</td>
+                <td>${{ food.price }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <p>Not feeling {{ food }}? <a href="{% url 'hungry' %}">Try again!</a></p>
+
+
+{% endblock %}

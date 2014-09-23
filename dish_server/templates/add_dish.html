@@ -2,8 +2,8 @@
 
 {% block content %}
     <h2>Share the Munchies!</h2>
-
-    <form method="post">
+    <hr>
+    <form method="post" action="." enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Share a new dish">
@@ -18,5 +18,5 @@
 {#        <input type="submit" value="Upload photo">#}
 {#    </form>#}
 
-{% endblock %}
+{% endblock content%}
 

@@ -19,24 +19,16 @@
 
         <div class="col-lg-4">
             <div class="well">
-                <p class="action">Look, it's you!</p>
-
-
-{#                <form method="post" enctype="multipart/form-data" action="{% url 'upload_picture' location.id %}">#}
-{#                    {% csrf_token %}#}
-{#                    <div class="form-group">#}
-{#                        {{ picture_form.picture }}#}
-{#                    </div>#}
-{#                    <div class="form-group">#}
-{#                        {{ picture_form.description }}#}
-{#                    </div>#}
-{#                    <button class="btn btn-xl" type="submit">add pictures</button>#}
-{#                </form>#}
-
-
-{#                <a href="{% url 'add_category' %}"><img src="{% static 'img/boy.jpg' %}" height="300px" width="320px">#}
-
+                <h4 class="action">{{ member.first_name|capfirst }} {{ member.last_name|capfirst }}</h4>
                 <hr>
+                <img style="width: 250px; margin-left: 45px" src= "{% static member.photo.url %}">
+{#                <hr>#}
+{#                <img src="{% static member.photo %}">#}
+{#                <form method="post" enctype="multipart/form-data">#}
+{#                    {% csrf_token %}#}
+{#                    {{ form.as_p }}#}
+{#                    <input type="submit" value="Change or upload a new photo!">#}
+{#                </form>#}
             </div>
         </div>
 
@@ -76,11 +68,14 @@
         <div class="col-lg-4">
             <h4>Your clubs</h4>
             <table class="table">
-
+                <tr>
+                    <th>Name</th>
+                    <th>View</th>
+                </tr>
                 {% for club in member.clubs.all %}
                 <tr>
                     <td>{{ club.name }}</td>
-                    <td><a href="{% url 'clubs' %}"><span class="glyphicon glyphicon-cutlery"></span></a></td>
+                    <td><a href="{% url 'view_club' club.id %}"><span style=padding-left:6px; class="glyphicon glyphicon-cutlery"></span></a></td>
                 </tr>
                 {% endfor %}
 

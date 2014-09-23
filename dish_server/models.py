@@ -7,6 +7,7 @@ from django.db import models
 class Member(AbstractUser):
     city = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
+    photo = models.ImageField(upload_to='member_photos', blank=True, null=True, default='member_photos/me.jpg')
 
     def __unicode__(self):
         return self.username
@@ -25,8 +26,9 @@ class Restaurant(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     city = models.CharField(max_length=100)
+    state = models.CharField(max_length=20, null=True)
     country = models.CharField(max_length=100)
-    group = models.ManyToManyField(Club, related_name="restaurants")
+    club = models.ManyToManyField(Club, related_name="restaurants")
 
     def __unicode__(self):
         return self.name
@@ -35,6 +37,9 @@ class Restaurant(models.Model):
 class Dish(models.Model):
     name = models.CharField(max_length=150)
     restaurant = models.ForeignKey(Restaurant, related_name="dish")
+    price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    course = models.CharField(max_length=50, null=True)
+    photo = models.ImageField(upload_to='dish_photos', blank=True, null=True)
 
     def __unicode__(self):
         return self.name
@@ -49,17 +54,3 @@ class Comment(models.Model):
 
     def __unicode__(self):
         return u'{}'.format(self.body)
-
-#
-# class Picture(models.Model):
-#     image = models.ImageField(upload_to='img', blank=True, null=True)
-
-
-#
-# class Tag(models.Model):
-#     name = models.CharField(max_length=30)
-#     restaurants = models.ManyToManyField(Restaurant, related_name="restauranttags")
-#     dishes = models.ManyToManyField(Dish, related_name="dishtags")
-#
-#     def __unicode__(self):
-#         return self.name
