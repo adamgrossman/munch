@@ -7,7 +7,7 @@
         text-align: center;
     }
     </style>
-{% endblock %}
+{% endblock css %}
 
 {% block content %}
     <h1>Hello, {{ user.username }}!</h1>
@@ -22,13 +22,6 @@
                 <h4 class="action">{{ member.first_name|capfirst }} {{ member.last_name|capfirst }}</h4>
                 <hr>
                 <img style="width: 250px; margin-left: 45px" src= "{% static member.photo.url %}">
-{#                <hr>#}
-{#                <img src="{% static member.photo %}">#}
-{#                <form method="post" enctype="multipart/form-data">#}
-{#                    {% csrf_token %}#}
-{#                    {{ form.as_p }}#}
-{#                    <input type="submit" value="Change or upload a new photo!">#}
-{#                </form>#}
             </div>
         </div>
 
@@ -65,6 +58,7 @@
                 </tr>
             </table>
         </div>
+
         <div class="col-lg-4">
             <h4>Your clubs</h4>
             <table class="table">
@@ -78,7 +72,7 @@
                     <td><a href="{% url 'view_club' club.id %}"><span style=padding-left:6px; class="glyphicon glyphicon-cutlery"></span></a></td>
                 </tr>
                 {% endfor %}
-
             </table>
         </div>
-{% endblock %}
+
+{% endblock content %}

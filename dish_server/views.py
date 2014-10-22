@@ -25,13 +25,6 @@ def register(request):
 def profile(request):
     if not request.user.is_authenticated():
         return redirect('login')
-
-    # profile_photo(request, request.user.id)
-    # if request.method == 'POST':
-    #     form = ProfilePictureForm(request.POST, request.FILES)
-    #     if form.is_valid():
-    #         form.save()
-
     member = Member.objects.get(pk=request.user.id)
     data = {'member': member}
     return render(request, "profile.html", data)
@@ -56,7 +49,7 @@ def add_club(request):
 def clubs(request):
     member = Member.objects.get(pk=request.user.id)
     members = Club.objects.filter(member=request.user)
-    data = {'member': member, "members":members}
+    data = {'member': member, "members": members}
     return render(request, "clubs.html", data)
 
 
@@ -120,12 +113,6 @@ def dishes(request):
 
 def view_dish(request, dish_id):
     dish = Dish.objects.get(pk=dish_id)
-
-    # if request.method == 'POST':
-    #     FoodPictureForm(request.POST, request.FILES)
-        # if form.is_valid():
-        #     form.save()
-
     data = {"dish": dish}
     return render(request, "view_dish.html", data)
 
@@ -136,13 +123,3 @@ def hungry(request):
     food = food[0]
     data = {"food": food}
     return render(request, 'hungry.html', data)
-
-#
-# def food_photo(request, dish_id):
-#     if request.method == 'POST':
-#         picture_form = FoodPictureForm(request.POST, request.FILES)
-#         if picture_form.is_valid():
-#             pic = Dish(photo=Dish.objects.get(pk=dish_id))
-#             pic.save()
-#
-#     return redirect('upload_picture', dish_id)
